@@ -13,7 +13,29 @@
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
+# Node.js dependencies
+node_modules/
+/Backend/node_modules/
+/Frontend/node_modules/
 
+# Environment variables (Crucial for security!)
+.env
+.env.local
+.env.development
+.env.production
+
+# Build outputs (for your Frontend React/Vite app)
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
 # Mono auto generated files
 mono_crash.*
 

@@ -1,0 +1,329 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html , body,
+#root{
+  height: 100%;
+  width: 100%;
+}
+
+main{
+
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 1.5rem;
+  gap: 1rem;
+
+}
+
+main .left , main .right{
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
+}
+
+/* main .left{
+
+  background-color: black; 
+  position: relative;
+} */
+
+/* main .right{
+  background: #16181D;
+    color: #E6E6E6;
+    padding: 2rem 2rem;
+    font-size: 1.2rem;
+    overflow: auto;
+} */
+
+/* main .left .review{
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgb(219, 219, 255);
+  color: black;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  
+  border-radius: 0.7rem;
+} */
+
+/* .left .code ,  .code pre, .code pre code{
+
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 0.7rem;
+  
+}  */
+    .left {
+      flex: 1;
+      min-width: 0;
+    }
+  
+    .code {
+      height: 100%;
+      background: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    /* Top editor bar */
+    .editor-header {
+      height: 42px;
+      background: #161b22;
+      border-bottom: 1px solid #30363d;
+  
+      display: flex;
+      align-items: center;
+      padding: 0 14px;
+      gap: 12px;
+  
+      font-family: monospace;
+    }
+  
+    .window-dots {
+      display: flex;
+      gap: 6px;
+    }
+  
+    .window-dots span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #484f58;
+    }
+  
+    .filename {
+      color: #c9d1d9;
+      font-size: 13px;
+    }
+  
+    .language {
+      margin-left: auto;
+      color: #8b949e;
+      font-size: 12px;
+    }
+  
+    /* Editor area */
+    .code-input {
+      position: relative;
+      flex: 1;
+      display: flex;
+      min-height: 0;
+      background: #0d1117;
+    }
+  
+    /* Line numbers */
+        .line-numbers {
+          width: 45px;
+          padding-top: 16px;
+          padding-right: 12px;
+    
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+    
+          color: #484f58;
+          font-family: "Consolas", monospace;
+          font-size: 14px;
+          line-height: 1.6;
+    
+          
+          flex-shrink: 0;
+        }
+  
+    /* Textarea */
+    .code-input textarea {
+      flex: 1;
+      resize: none;
+  
+      border: none;
+      outline: none;
+  
+      background: transparent;
+      color: #c9d1d9;
+  
+      font-family: "Consolas", "Courier New", monospace;
+      font-size: 14px;
+      line-height: 1.6;
+  
+      padding: 16px 16px 70px 10px;
+  
+      white-space: pre;
+      overflow: auto;
+    }
+  
+    .code-input textarea::placeholder {
+      color: #484f58;
+    }
+  
+    /* Scrollbar */
+    .code-input textarea::-webkit-scrollbar {
+      width: 8px;
+    }
+  
+    .code-input textarea::-webkit-scrollbar-track {
+      background: #0d1117;
+    }
+  
+    .code-input textarea::-webkit-scrollbar-thumb {
+      background: #30363d;
+      border-radius: 5px;
+    }
+  
+    /* Review button */
+    .code-input button {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+  
+      padding: 9px 16px;
+  
+      border: 1px solid #30363d;
+      border-radius: 6px;
+  
+      background: #238636;
+      color: white;
+  
+      font-size: 13px;
+      font-weight: 600;
+  
+      cursor: pointer;
+      transition: 0.2s;
+    }
+  
+    .code-input button:hover {
+      background: #2ea043;
+    }
+
+.code-input {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.code-input textarea {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  resize: none;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #f5f5f5;
+  padding: 20px;
+  padding-bottom: 70px;
+  font-family: "Fira Code", "Fira Mono", monospace;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.code-input textarea::placeholder {
+  color: #777;
+}
+
+.code-input button {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  background: #fff;
+  color: #111;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.code-input button:hover {
+  opacity: 0.85;
+}
+.right {
+  background: #16181d;
+  color: #e6e6e6;
+  padding: 24px 30px;
+  border-radius: 12px;
+  overflow-y: auto;
+  line-height: 1.5;
+}
+
+.right h1,
+.right h2,
+.right h3 {
+  color: #ffffff;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.right h1 {
+  font-size: 1.4rem;
+}
+
+.right h2 {
+  font-size: 1.2rem;
+}
+
+.right h3 {
+  font-size: 1.05rem;
+}
+
+.right p {
+  color: #c9cdd4;
+  margin: 10px 0;
+}
+
+.right ul,
+.right ol {
+  padding-left: 25px;
+}
+
+.right li {
+  margin: 8px 0;
+  color: #d6d9df;
+}
+
+.right strong {
+  color: #ffffff;
+}
+
+.right code {
+  background: #0d1117;
+  color: #7dd3fc;
+  padding: 3px 6px;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+.right pre {
+  background: #0d1117;
+  border: 1px solid #292e38;
+  border-radius: 8px;
+  padding: 16px;
+  overflow-x: auto;
+  margin: 14px 0;
+}
+
+.right pre code {
+  background: transparent;
+  padding: 0;
+  color: #e6e6e6;
+}
+
+.right hr {
+  border: none;
+  border-top: 1px solid #30343d;
+  margin: 20px 0;
+}
